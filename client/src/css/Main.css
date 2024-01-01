@@ -1,0 +1,118 @@
+/* MAIN */
+  #main {
+    width: 665px;
+    margin: 0px 15px;
+  }
+  
+  .author-wrapper {
+    align-items: center;
+    padding-bottom: 3rem;
+    background-color: #212121;
+  }
+  
+  .title h3 {
+    color: rgb(45, 45, 45);
+    font-size: 29px;
+    font-weight: 100;
+    line-height: 40px;
+    color: white;
+  }
+  
+  .title h3 span:not(.edit-btn) {
+    padding: 6px 10px;
+    background-color: #ECB1C3;
+  }
+  
+  .media {
+    gap: 20px;
+    display: flex;
+    align-items: top;
+    padding: 40px 0px 20px;
+    justify-content: center;
+  }
+  
+  .media img {
+    opacity: 0.8;
+    width: 140px;
+    border: none;
+    cursor: pointer;
+    border-radius: 100px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .media img:hover {
+    opacity: 1;
+  }
+  
+  .media p {
+    font-size: 16px;
+    font-weight: 500;
+    padding-right: 30px;
+    color: rgba(130, 130, 130, 0.614);
+  }
+  
+  .auth-foo-left a {
+    color: #ECB1C3;
+    font-weight: 100;
+    margin: auto;
+    text-decoration: none;
+  }
+
+  .author-footer {
+    display: flex;
+    padding: 15px 0px 0px;
+    margin: 30px 0px 0px;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(184, 184, 184, 0.194);
+  }
+  /* END OF MAIN */
+
+
+  /* POST WRAPPER  CHECK REUSABLE.CSS */
+
+  .pagination-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pagination-nav ul {
+    gap: 5px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pagination-nav ul li {
+    background-color: #ECB1C3;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .pagination-nav ul li:hover {
+    background-color: #212121;
+  }
+
+  .pagination-nav ul li:not(:first-child) {
+    padding: 10px 15px;
+  }
+
+  .pagination-nav ul li:first-child {
+    font-size: x-small;
+    padding: 13.3px 15px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  .pagination-nav ul li:last-child {
+    font-size: x-small;
+    padding: 13.3px 15px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  .pagination-nav ul a {
+    text-decoration: none;
+  }

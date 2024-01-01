@@ -1,0 +1,32 @@
+* {
+  color: white;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.3px;
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: #313131;
+}
+
+#right-sidebar {
+  width: 292.5px;
+}
+
+#left-sidebar {
+  width: 195px;
+}
+
+.row {
+  display: flex;
+  align-items: top;
+  margin-top: 2.5rem;
+  justify-content: center;
+  /* display: grid; */
+  /* grid-template-columns: 195px 695px 292.500px; */
+  /* grid-template-rows: 420px 6745.270px 2025px; */
+  /* grid-template-rows: 553px 6745.270px 2025px; */
+}

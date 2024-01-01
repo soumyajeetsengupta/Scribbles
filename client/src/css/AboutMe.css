@@ -1,0 +1,37 @@
+#main-about-me {
+    width: 975px;
+    margin: 0px 15px;
+}
+
+.my-skill-section {
+    gap: 20px;
+    display: flex;
+}
+
+.my-skill  {
+    width: 480px;
+}
+
+.what-can-do {
+    width: 475px;
+}
+
+.about-me-text {
+    padding: 40px 40px 40px;
+}
+
+.about-me-text img {
+    float: left;
+    opacity: 0.8;
+    width: 140px;
+    border: none;
+    cursor: pointer;
+    border-radius: 100px;
+    margin-right: 20px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.about-me-text img:hover {
+    opacity: 1;
+}

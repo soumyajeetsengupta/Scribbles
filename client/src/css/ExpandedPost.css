@@ -1,0 +1,141 @@
+#main-expanded {
+    width: 665px;
+    margin: 0px 15px;
+}
+
+.post-media, .post-text, .post-footer {
+    width: 585px;
+}
+
+.post-Ex-wrapper {
+    align-items: center;
+    padding-bottom: 2rem;
+    background-color: #212121;
+}
+
+.p-p-c-wrapper {
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    margin: 0px 0px 16px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.commnet-section .title {
+    padding: 0px 0px 45px;
+}
+
+.title h2 {
+    color: rgb(45, 45, 45);
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 30px;
+    color: white;
+}
+
+.cmt-1 {
+    gap: 30px;
+    display: flex;
+    margin-bottom: 50px;
+    padding: 0px 20px;
+}
+
+.cmt-top-bar {
+    display: flex;
+    padding: 0px 0px 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cmt-reply-btn button {
+    border: none;
+    color: white;
+    padding: 4px;
+    font-size: 11px;
+    border-radius: 2px;
+    background-color: #ECB1C3;
+}
+
+.cmt-name, .cmt-reply-btn button {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cmt-pfp img {
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 100%;
+}
+
+.cmt-sub-section-reply ul {
+    list-style: none;
+}
+
+.cmt-sub-section-reply ul li {
+    margin: 40px 0px;
+}
+
+.cmt-form-container {
+    display: grid;
+    row-gap: 10px;
+    column-gap: 30px;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "n t"
+    "e t"
+    "p t"
+    ;
+}
+
+.cmt-form .title {
+    margin-bottom: 10px;
+} 
+
+.cmt-form-container div input {
+    width: 100%;
+    padding: 12px 10px;
+}
+
+.cmt-name-box {
+    grid-area: n;
+}
+
+.cmt-email-box {
+    grid-area: e;
+}
+
+.cmt-phone-box {
+    grid-area: p;
+}
+
+.cmt-message-box {
+    grid-area: t;
+}
+
+.cmt-form-container div textarea {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    outline:#ECB1C3;
+    background-color: #313131;
+}
+
+.post-cmt-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0px 20px;
+}
+
+.post-cmt {
+    border: none;
+    color: white;
+    font-size: medium;
+    text-align: center;
+    border-radius: 2px;
+    padding: 7.5px 12px;
+    background-color: #ECB1C3;
+}
