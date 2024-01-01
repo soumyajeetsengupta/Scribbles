@@ -19,6 +19,6 @@ Scribble is a minimalist blog platform designed to showcase thoughts, ideas, and
 - SEO-friendly structure for better visibility in search results
 
 ### Technology Stack
-- Frontend: React, Redux, Material-UI
+- Frontend: React, Redux
 - Backend: Node.js, Express, MongoDB
 - Database: MongoDB
