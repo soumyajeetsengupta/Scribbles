@@ -3,13 +3,13 @@
 A personal blog site built with the MERN stack.
 
 ### Table of Contents
-- About: #about
-- Features: #features
-- Technology Stack: #technology-stack
-- Setup: #setup
-- Usage: #usage
-- Contribution: #contribution
-- License: #license
+- About
+- Features
+- Technology Stack
+- Setup
+- Usage
+- Contribution
+- License
 
 ### About
 Scribble is a minimalist blog platform designed to showcase thoughts, ideas, and stories. It provides a clean and uncluttered interface for writers to focus on their craft and share their content with the world.
