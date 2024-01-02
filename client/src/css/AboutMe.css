@@ -35,3 +35,116 @@
 .about-me-text img:hover {
     opacity: 1;
 }
+
+/* Left Side Skills */
+
+.my-skill {
+    padding-bottom: 35px;
+}
+
+.my-skill-rating-contents {
+    padding: 20px 0px 0px;
+}
+
+.skills-wrapper {
+    padding-bottom: 15px;
+}
+
+.skill-bar {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding: 5px 0px 0px;
+    justify-content: space-between;
+}
+
+.skill-1 .skill-bar .skill-bar-left {
+    width: 100%;
+    height: 8px;
+}
+
+.skill-1 .skill-bar .skill-bar-left .skill-measure {
+    width: 80%;
+    height: 13px;
+    background-color: #ECB1C3;
+}
+
+.skill-2 .skill-bar .skill-bar-left {
+    width: 100%;
+    height: 8px;
+}
+
+.skill-2 .skill-bar .skill-bar-left .skill-measure {
+    width: 80%;
+    height: 13px;
+    background-color: #ECB1C3;
+}
+
+.skill-3 .skill-bar .skill-bar-left {
+    width: 100%;
+    height: 8px;
+}
+
+.skill-3 .skill-bar .skill-bar-left .skill-measure {
+    width: 60%;
+    height: 13px;
+    background-color: #ECB1C3;
+}
+
+.skill-4 .skill-bar .skill-bar-left {
+    width: 100%;
+    height: 8px;
+}
+
+.skill-4 .skill-bar .skill-bar-left .skill-measure {
+    width: 60%;
+    height: 13px;
+    background-color: #ECB1C3;
+}
+
+
+.my-skill, .what-can-do {
+    height: fit-content;
+}
+
+/* Right Side Accordian */
+
+.accordian-container {
+    padding-bottom: 20px;
+}
+
+
+.accordian-group {
+    margin: 20px 0px 10px;
+}
+
+.accordian-heading {
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    text-decoration: none;
+    background-color: #313131;
+}
+
+.heading-symbol {
+    padding: 6px 8px;
+    margin-right: 10px;
+    border: 1px solid #ECB1C3;
+    background-color: #ECB1C3;
+}
+
+.according-description {
+    padding: 10px 10px 10px 40px;
+    margin: 5px 0px 10px;
+    background-color: #313131;
+}
+
+.desc-on {
+    display: block;
+    opacity: 1;
+}
+
+.desc-off {
+    display: none;
+    opacity: 0;
+}
