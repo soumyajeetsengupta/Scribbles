@@ -120,6 +120,7 @@
 
 .accordian-heading {
     display: flex;
+    cursor: pointer;
     font-size: 15px;
     align-items: center;
     text-decoration: none;

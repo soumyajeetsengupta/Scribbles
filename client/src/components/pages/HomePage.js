@@ -78,3 +78,5 @@ function HomePage() {
 }
 
 export default HomePage;
+
+// Minimum width that you must set is 355px.
