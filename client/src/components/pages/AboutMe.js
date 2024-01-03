@@ -1,6 +1,31 @@
 import '../../css/AboutMe.css';
+import {accordian} from '../functionalities/featuresAboutMe.js'
 
 export default function AboutMe () {
+    const clickAccordian = (targetElem) => {
+        let id = targetElem;
+        let element = document.getElementById(targetElem);
+        let value = ((id == 'h-1') || (id == 'h-2')) ? "95px" : "120px";
+        if(element.getAttribute("isclicked") == 'true')
+        {
+            element.getElementsByClassName('heading-symbol')[0].children[0].classList.remove("fa-minus");
+            element.getElementsByClassName('heading-symbol')[0].children[0].classList.add("fa-plus");
+
+            element.nextElementSibling.classList.remove("desc-off");
+            element.nextElementSibling.style.height = 0;
+            element.setAttribute("isclicked", 'false');
+        }
+        else 
+        {
+            element.getElementsByClassName('heading-symbol')[0].children[0].classList.remove("fa-plus");
+            element.getElementsByClassName('heading-symbol')[0].children[0].classList.add("fa-minus");
+            
+            element.nextElementSibling.classList.add("desc-off");
+            element.nextElementSibling.style.height = value;
+            element.setAttribute("isclicked", 'true');
+        }
+    }
+
     return(
         <div id="main-about-me">
             <div className="post-Ex-wrapper contact-me-wrapper">
@@ -110,16 +135,16 @@ Join me on my coding (and hacking) journey!</p>
                     </div>
                     <div className='accordian-container'>
                         <div className='accordian-group click-on'>
-                            <div className='accordian-heading'>
+                            <div className='accordian-heading' id="h-1" isClicked="false" onClick={() => clickAccordian("h-1")}>
                                 <div className='heading-symbol'><i class="fa-solid fm-sm fa-plus"></i></div>
                                 <div className='heading-text'>Let's craft beautiful & responsive interfaces.</div>
                             </div>
-                            <div className='according-description desc-on'>
+                            <div className='according-description'>
                                 <p>Need a sleek website that engages users? I'll spin up stunning front-end experiences with modern frameworks like React</p>
                             </div>
                         </div>
                         <div className='accordian-group click-on'>
-                            <div className='accordian-heading'>
+                            <div className='accordian-heading' id="h-2" isClicked="false" onClick={() => clickAccordian("h-2")}>
                                 <div className='heading-symbol'><i class="fa-solid fm-sm fa-plus"></i></div>
                                 <div className='heading-text'>Powerhouse your app with robust backend logic.</div>
                             </div>
@@ -128,7 +153,7 @@ Join me on my coding (and hacking) journey!</p>
                             </div>
                         </div>
                         <div className='accordian-group click-on'>
-                            <div className='accordian-heading'>
+                            <div className='accordian-heading' id="h-3" isClicked="false" onClick={() => clickAccordian("h-3")}>
                                 <div className='heading-symbol'><i class="fa-solid fm-sm fa-plus"></i></div>
                                 <div className='heading-text'>Data wrangling? I got this.</div>
                             </div>
