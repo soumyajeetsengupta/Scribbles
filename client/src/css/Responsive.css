@@ -1,0 +1,106 @@
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* Homepage */
+    #main {
+        width: 362px !important;
+    }
+
+    .media {
+        gap: none !important;
+        display: block !important;
+    }
+    .media p {
+        font-size: 17px !important;
+        padding-right: 0px !important;
+    }
+
+    .media img {
+        float: left !important;
+        height: 140px !important;
+        margin-right: 20px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .title h3 {
+        text-align: center !important;
+    }
+
+    .author-footer {
+        gap: 20px !important;
+        flex-direction: column !important;
+    }
+
+    .post-media img {
+        width: 300px !important;
+    }
+
+    .post-media, .post-text, .post-footer {
+        width: 300px !important;
+    }
+    
+    .meta-tags-container {
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 300px !important;
+        padding-right: 0px !important;
+        background-color: #212121 !important;
+    }
+
+    .meta-tags-container li {
+        font-size: x-small !important;
+        text-align: center !important;
+    }
+
+    .pagination-nav {
+        margin-bottom: 40px;
+    }
+
+    #right-sidebar {
+        width: 362px !important;
+    }
+
+    .widget, .widget-wrapper {
+        margin: auto !important;
+        text-align: center !important;
+    }
+
+    .widget {
+        margin-bottom: 20px !important;
+    }
+
+    .hot-topics {
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    /* Homepage End */
+
+    /* Contact Page */
+    .row, .contact-form-main-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    #main-contact {
+        width: 362px !important;
+    }
+
+    .contact-me-form, .contact-details {
+        width: 100% !important;
+    }
+
+    .post-cmt-btn {
+        justify-content: center !important;
+    }
+
+    .contact-me-form-container {
+        grid-template-areas:
+        "n n"
+        "e e"
+        "p p"
+        "s s"
+        "t t" !important;
+    }
+    /* Contact Page End */
+}
