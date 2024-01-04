@@ -7,7 +7,7 @@ function HomePage() {
         <div id="main">
           <article className="author-wrapper a-p-c-wrapper">
             <div className="title">
-              <h3>HI THERE, WELCOME TO <span>IBLOGGO</span></h3>
+              <h3>HI THERE, WELCOME TO <span>SCRIBBLE</span></h3>
             </div>
             <div className="media">
               <img src="https://media.licdn.com/dms/image/D4D03AQG4GvTFemdxvg/profile-displayphoto-shrink_400_400/0/1701826717178?e=1709164800&v=beta&t=5TeEJY1M83h-KVDqZrfrIfOlyDGArnDoLkVawGYx5vE" alt="author-pfp" />

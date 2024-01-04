@@ -64,7 +64,7 @@
 }
 
 .skill-1 .skill-bar .skill-bar-left .skill-measure {
-    width: 80%;
+    /* width: 80%; */
     height: 13px;
     background-color: #ECB1C3;
 }
@@ -75,7 +75,7 @@
 }
 
 .skill-2 .skill-bar .skill-bar-left .skill-measure {
-    width: 80%;
+    /* width: 80%; */
     height: 13px;
     background-color: #ECB1C3;
 }
@@ -86,7 +86,7 @@
 }
 
 .skill-3 .skill-bar .skill-bar-left .skill-measure {
-    width: 60%;
+    /* width: 60%; */
     height: 13px;
     background-color: #ECB1C3;
 }
@@ -97,9 +97,14 @@
 }
 
 .skill-4 .skill-bar .skill-bar-left .skill-measure {
-    width: 60%;
+    /* width: 60%; */
     height: 13px;
     background-color: #ECB1C3;
+}
+
+.skill-measure {
+    width: 0%;
+    transition: all 0.3s ease-in-out;
 }
 
 

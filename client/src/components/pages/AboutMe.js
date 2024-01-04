@@ -1,4 +1,5 @@
 import '../../css/AboutMe.css';
+import { useEffect } from 'react';
 import {accordian} from '../functionalities/featuresAboutMe.js'
 
 export default function AboutMe () {
@@ -25,6 +26,33 @@ export default function AboutMe () {
             element.setAttribute("isclicked", 'true');
         }
     }
+    
+    function animateProgressBar() {
+        let contentsPresent = document.getElementsByClassName('skills-wrapper').length;
+        
+        let targetElem = document.getElementsByClassName('my-skill')[0];
+        let targetScreenPosition = targetElem.getBoundingClientRect().y;
+        let elemTop = targetElem.getBoundingClientRect().top;
+        let elemBottom = targetElem.getBoundingClientRect().bottom;
+
+        let isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+
+        for(let i = 1; i <= contentsPresent; i++)
+        {
+            let classN = 'skill-' + i;
+            let element = document.getElementsByClassName(classN)[0];
+            let fillVal = element.getElementsByClassName('skill-bar-right')[0].textContent;
+            
+            if(isVisible)
+            {
+                element.getElementsByClassName('skill-measure')[0].style.width = fillVal;
+                window.removeEventListener('scroll', animateProgressBar);
+            }
+        }
+    }
+
+    
+    window.addEventListener('scroll', animateProgressBar)
 
     return(
         <div id="main-about-me">
