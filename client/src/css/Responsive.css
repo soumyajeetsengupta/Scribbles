@@ -1,4 +1,34 @@
 @media only screen and (max-width: 767px) and (orientation: portrait) {
+    .row {
+        margin-top: 5px;
+    }
+
+    /* NAVBAR */
+    #navbar {
+        display: flex !important;
+    }
+
+    .navbar-menu {
+        display: block !important;
+    }
+
+    .flat-responsive-menu {
+        text-align: center;
+    }
+
+    .flat-responsive-menu li:not(:last-child) {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.242);
+    }
+
+    /* END OF NAVBAR */
+
+    /* LEFTSIDE BAR */
+    #left-sidebar {
+        opacity: 0;
+        display: none;
+    }
+    /* END OF LEFTSIDE BAR */
+
     /* Homepage */
     #main {
         width: 362px !important;
@@ -74,6 +104,27 @@
     }
     
     /* Homepage End */
+
+    /* ABOUT US PAGE */
+
+    #main-about-me {
+        width: 362px !important;
+    }
+
+    .my-skill, .what-can-do {
+        width: 362px !important;
+    }
+
+    .my-skill-section {
+        width: 362px !important;
+        flex-direction: column !important;
+    }
+
+    .according-description p {
+        padding: 0px 8px;
+    }
+
+    /* END OF ABOUT US PAGE */
 
     /* Contact Page */
     .row, .contact-form-main-container {

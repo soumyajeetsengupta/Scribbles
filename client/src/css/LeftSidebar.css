@@ -3,11 +3,15 @@
     border: none;
     height: fit-content;
     background-color: #212121;
+    transition: all 0.3s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   }
   
   .logo-wrapper a img {
     margin: 20px 0px;
+    width: 145px;
+    padding: 10px 0px;
+    filter: brightness(0) invert(1);
   }
   
   .logo-wrapper {

@@ -6,7 +6,7 @@ function LeftSidebar() {
           <div className="logo-wrapper l-wrapper">
             <center>
               <Link to="/" class="navbar-brand" style={{textDecoration: 'none'}}>
-                <img src="https://html.designingmedia.com/ibloggo/images/logo.png" alt="logo" />
+                <img src="https://images.squarespace-cdn.com/content/v1/5d315182750b140001f84916/1606867326807-Q6K3SA2U999ATF15GG4V/ScribbleLogo.png?format=1500w" alt="logo" />
               </Link>
             </center>
           </div>

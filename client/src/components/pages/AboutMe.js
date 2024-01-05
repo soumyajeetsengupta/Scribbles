@@ -1,5 +1,4 @@
 import '../../css/AboutMe.css';
-import { useEffect } from 'react';
 import {accordian} from '../functionalities/featuresAboutMe.js'
 
 export default function AboutMe () {
@@ -7,6 +6,10 @@ export default function AboutMe () {
         let id = targetElem;
         let element = document.getElementById(targetElem);
         let value = ((id == 'h-1') || (id == 'h-2')) ? "95px" : "120px";
+        if(window.pageXOffset <= 375)
+        {
+            value = ((id == 'h-1') || (id == 'h-2')) ? "145px" : "190px";
+        }
         if(element.getAttribute("isclicked") == 'true')
         {
             element.getElementsByClassName('heading-symbol')[0].children[0].classList.remove("fa-minus");
@@ -28,8 +31,14 @@ export default function AboutMe () {
     }
     
     function animateProgressBar() {
-        let contentsPresent = document.getElementsByClassName('skills-wrapper').length;
-        
+        let contentsPresent = document.getElementsByClassName('skills-wrapper').length || 0;
+        console.log(contentsPresent);
+        if(contentsPresent <= 0)
+        {
+            window.removeEventListener('scroll', animateProgressBar);
+            return;
+        }
+
         let targetElem = document.getElementsByClassName('my-skill')[0];
         let targetScreenPosition = targetElem.getBoundingClientRect().y;
         let elemTop = targetElem.getBoundingClientRect().top;
@@ -51,8 +60,7 @@ export default function AboutMe () {
         }
     }
 
-    
-    window.addEventListener('scroll', animateProgressBar)
+    window.addEventListener('scroll', animateProgressBar);
 
     return(
         <div id="main-about-me">
