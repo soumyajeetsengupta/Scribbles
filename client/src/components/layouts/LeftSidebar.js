@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import NavbarMenu from '../pages/NavbarMenu';
 
 function LeftSidebar() {
     return (
@@ -13,23 +14,7 @@ function LeftSidebar() {
           {/* END OF LOGO-WRAPPER */}
           <div className="menu-wrapper l-wrapper">
             <nav class="flat-menu">
-              <ul className="flat-responsive-menu">
-                <li>
-                  <a href="#">Home</a>
-                </li>
-
-                <li>
-                  <a href="#">CATEGORIES</a>
-                </li>
-
-                <li>
-                  <Link to="/about-me" style={{textDecoration: 'none'}}>About Me</Link>
-                </li>
-
-                <li>
-                  <Link to="/contact-me" style={{textDecoration: 'none'}}>Contact</Link>
-                </li>
-              </ul>
+              <NavbarMenu />
             </nav>
           </div>
           {/* END OF MAIN-WRAPPER */}

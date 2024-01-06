@@ -15,6 +15,7 @@ import {Routes, Route} from 'react-router-dom';
 import ExpandedPost from './components/pages/ExpandedPost';
 import Contact from './components/pages/Contact';
 import AboutMe from './components/pages/AboutMe';
+import CreatePost from './components/pages/CreatePost';
 // Components - End
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path={'/post'} element={ <><ExpandedPost /> <RightSidebar /></> } />
         <Route path={'/contact-me'} element={ <Contact /> } />
         <Route path={'/about-me'} element={ <AboutMe /> } />
+        <Route path={'/create-post'} element={ <CreatePost /> } />
       </ Route>
     </Routes>
   );

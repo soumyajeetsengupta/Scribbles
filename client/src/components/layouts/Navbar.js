@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import '../../css/Navbar.css';
 import { Link } from 'react-router-dom';
+import NavbarMenu from '../pages/NavbarMenu';
 
 export default function Navbar () {
     function menuOpen() {
@@ -23,23 +24,7 @@ export default function Navbar () {
                 </div>
             </div>
             <div className='navbar-menu'>
-                <ul className="flat-responsive-menu">
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-
-                    <li>
-                        <a href="#">CATEGORIES</a>
-                    </li>
-
-                    <li>
-                        <Link to="/about-me" style={{textDecoration: 'none'}}>About Me</Link>
-                    </li>
-
-                    <li>
-                        <Link to="/contact-me" style={{textDecoration: 'none'}}>Contact</Link>
-                    </li>
-                </ul>
+                <NavbarMenu />
             </div>
         </>
         

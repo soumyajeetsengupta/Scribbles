@@ -1,0 +1,47 @@
+.create-post-page {
+    width: 975px;
+    margin: 0px 15px;
+}
+
+.create-post-container {
+    display: flex;
+    gap: 20px;
+    padding: 50px 30px;
+    flex-direction: column;
+    background-color: #212121;
+}
+
+.create-post-container input {
+    display: block;
+    background-color: #212121;
+}
+
+.ql-picker-options {
+    background-color: #313131 !important;
+}
+
+.ql-toolbar, .ql-snow {
+    border: none !important;
+}
+
+button {
+    border: none;
+    padding: 8px;
+    border-radius: 2px;
+    background-color: #ECB1C3;
+}
+
+.form-section-titles {
+    font-size: 20px;
+    /* margin-left: 20px; */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+legend {
+    padding: 10px;
+}
+
+input {
+    padding: 10px 10px;
+    font-size: medium;
+}

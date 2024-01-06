@@ -3,6 +3,16 @@
         margin-top: 5px;
     }
 
+    /* Create your post */
+    .create-post-page {
+        width: 362px !important;
+    }
+
+    .create-post-container input{
+        width: 300px !important;
+    }
+    /* End of create your post */
+
     /* NAVBAR */
     #navbar {
         display: flex !important;
