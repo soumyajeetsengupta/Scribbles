@@ -37,6 +37,3 @@ app.get('/post', async (req,res) => {
 })
 
 app.listen(4000);
-
-
-//mongodb+srv://sgs2305maddy:wiTgAYXnwWgyXWml@cluster0.b0qlv6j.mongodb.net/?retryWrites=true&w=majority

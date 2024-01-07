@@ -4,7 +4,8 @@ export default function NavbarMenu() {
     function menuClose() {
         if(document.getElementsByClassName('navbar-menu')[0].classList.contains('hide-menu'))
         {
-            console.log("clicked!");
+            document.getElementsByClassName('fa-solid')[0].classList.toggle("fa-bars");
+            document.getElementsByClassName('fa-solid')[0].classList.toggle("fa-x");
             document.getElementsByClassName('navbar-menu')[0].classList.toggle("hide-menu");
         }
     }
