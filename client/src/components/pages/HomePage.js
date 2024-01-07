@@ -1,6 +1,7 @@
-import Post from './Post';
+// import Post from './Post';
 import '../../css/Main.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AllPosts from './AllPosts';
 
 function HomePage() {
     return (
@@ -53,7 +54,7 @@ function HomePage() {
               </div>
             </div>
           </article>
-          <Post />
+          <AllPosts />
           <div className='pagination-nav'>
             <ul>
               <li>

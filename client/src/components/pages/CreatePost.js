@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Navigate } from 'react-router-dom';
 import '../../css/CreatePost.css';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
@@ -25,6 +26,7 @@ export default function CreatePost() {
     const [summary,setSummary] = useState('');
     const [content,setContent] = useState('');
     const [file,setFile] = useState('');
+    const [redirect,setRedicrect] = useState(false);
 
     async function createNewPost(ev) {
         const data = new FormData();
@@ -37,9 +39,15 @@ export default function CreatePost() {
             method: 'POST',
             body:  data,
         });
-        console.log(await response.json());
+        
+        if(response.ok) {
+            setRedicrect(true);
+        }
     }
 
+    if(redirect) {
+        return <Navigate to={'/'} />
+    }
     return (
         <div className='create-post-page'>
             <div className="post-Ex-wrapper contact-me-wrapper">
@@ -69,7 +77,7 @@ export default function CreatePost() {
                     />
                 </fieldset>
                 <fieldset>
-                    <legend><span className='form-section-titles'>Choose File</span></legend>
+                    <legend><span className='form-section-titles'>Choose Image</span></legend>
                     <input 
                         type="file"
                         onChange={ev => setFile(ev.target.files)}

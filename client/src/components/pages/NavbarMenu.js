@@ -1,14 +1,22 @@
 import { Link } from "react-router-dom";
 
 export default function NavbarMenu() {
+    function menuClose() {
+        if(document.getElementsByClassName('navbar-menu')[0].classList.contains('hide-menu'))
+        {
+            console.log("clicked!");
+            document.getElementsByClassName('navbar-menu')[0].classList.toggle("hide-menu");
+        }
+    }
+
     return(
-        <ul className="flat-responsive-menu">
+        <ul className="flat-responsive-menu" onClick={menuClose}>
             <li>
                 <Link to="/" style={{textDecoration: 'none'}}>Home</Link>
             </li>
 
             <li>
-                <Link to="/create-post" style={{textDecoration: 'none'}}>CATEGORIES</Link>
+                <Link to="/create-post" style={{textDecoration: 'none'}}>Create Post</Link>
             </li>
 
             <li>

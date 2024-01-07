@@ -6,7 +6,7 @@ function RightSidebar() {
               <h3>EMAIL <br/>NEWSLETTER</h3>
             </div>
             <p>
-              Sign up to receive updates on freebie releases and find out what's new with iBloggo!
+              Sign up to receive updates on freebie releases and find out what's new with Scribble!
             </p>
             <form id="subscribe">
               <input type="email" className="form-control widget-wrapper" placeholder="Enter your email address..." />
