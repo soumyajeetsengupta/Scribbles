@@ -1,14 +1,27 @@
 import '../../css/ExpandedPost.css';
 import { useEffect, useState } from "react";
+import { Link, useParams } from 'react-router-dom';
 
-export default function ExpandedPost ({title,summary,category,tags,cover,content,createdAt}) {
-    useEffect(() => { document.getElementsByClassName('post-text')[0].innerHTML = content;}, []);
+export default function ExpandedPost () {
+    const [postInfo, setPostInfo] = useState(null);
+    const {id} = useParams();
+
+    useEffect(() => { 
+        fetch(`http://localhost:4000/post/${id}`)
+        .then(response => {
+            response.json().then(postInfo => {
+                setPostInfo(postInfo);
+            });
+        }); 
+    }, []);
+
+    if(!postInfo) return '';
 
     return(
         <div id="main-expanded">
             <div className="post-Ex-wrapper p-p-c-wrapper">
                 <div className="title">
-                    <h3>{title}</h3>
+                    <h3><Link to={`/edit-post/${id}`} style={{textDecoration: 'none'}}><span class="edit-btn"><i class="fa-regular fa-pen-to-square"></i></span></Link>{postInfo.title}</h3>
                 </div>
                 <div className="post-meta-tags">
                     <ul className='meta-tags-container'>
@@ -18,7 +31,7 @@ export default function ExpandedPost ({title,summary,category,tags,cover,content
                         </li>
                         <li className='category'>
                             <i class="fa-regular fa-folder-open"></i>
-                            <p>{category}</p>
+                            <p>{postInfo.category}</p>
                         </li>
                         <li className='comments'>
                             <i class="fa-solid fa-comments"></i>
@@ -26,7 +39,7 @@ export default function ExpandedPost ({title,summary,category,tags,cover,content
                         </li>
                         <li className='date-of-post'>
                             <i class="fa-regular fa-calendar"></i>
-                            <p>{createdAt.split('T')[0]}</p>
+                            <p>{postInfo.createdAt.split('T')[0]}</p>
                         </li>
                         <li className='views'>
                             <i class="fa-regular fa-eye"></i>
@@ -38,16 +51,16 @@ export default function ExpandedPost ({title,summary,category,tags,cover,content
 
             <article className="post-Ex-wrapper p-p-c-wrapper">
                 <div className="post-media">
-                <img src={'http://localhost:4000/' + cover} alt='post-media' />
+                <img src={'http://localhost:4000/' + postInfo.cover} alt='post-media' />
                 </div>
-                <div className="post-text"></div>
+                <div className="post-text" dangerouslySetInnerHTML={{__html: postInfo.content}} />
                 <div className="post-footer">
                     <div className="auth-foo-left">
                         <div className="post-meta-tags">
                             <ul className='meta-tags-container'>
                                 <li className='tags'>
                                     <i class="fa-solid fa-tags"></i>
-                                    <p>{tags}</p>
+                                    <p>{postInfo.tags}</p>
                                 </li>
                             </ul>
                         </div>

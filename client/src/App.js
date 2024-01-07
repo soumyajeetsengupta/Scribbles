@@ -20,6 +20,7 @@ import ExpandedPost from './components/pages/ExpandedPost';
 import Contact from './components/pages/Contact';
 import AboutMe from './components/pages/AboutMe';
 import CreatePost from './components/pages/CreatePost';
+import EditPost from "./components/pages/EditPost";
 // Components - End
 
 function App() {
@@ -36,13 +37,10 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={ <><HomePage /> <RightSidebar /></>} />
-        <Route path={'/post'} element={ <>
-            {posts.length > 0  && posts.map(post => (
-                <ExpandedPost {...post}/>
-            ))}
-         <RightSidebar /></> } />
+        <Route path={'/post/:id'} element={ <><ExpandedPost /> <RightSidebar /></> } />
         <Route path={'/contact-me'} element={ <Contact /> } />
         <Route path={'/about-me'} element={ <AboutMe /> } />
+        <Route path={'/edit-post'} element={ <EditPost /> } />
         <Route path={'/create-post'} element={ <CreatePost /> } />
       </ Route>
     </Routes>

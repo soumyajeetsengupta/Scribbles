@@ -36,6 +36,12 @@ app.post('/post', uploadMiddleware.single('file'), async (req, res) => {
 app.get('/post', async (req,res) => {
     const posts = await Post.find().sort({createdAt: -1}).limit(20);
     res.json(posts);
-})
+});
+
+app.get('/post/:id', async (req, res) => {
+    const {id} = req.params;
+    const postDoc = await Post.findById(id);
+    res.json(postDoc);
+});
 
 app.listen(4000);

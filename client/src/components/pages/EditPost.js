@@ -1,50 +1,50 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
+
 import '../../css/CreatePost.css';
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
 import Editor from './Editor';
 
-export default function CreatePost() {
+export default function EditPost() {
+    const [searchParams] = useSearchParams();
     const [title,setTitle] = useState('');
     const [summary,setSummary] = useState('');
     const [category,setCategory] = useState('');
     const [tags,setTags] = useState('');
     const [content,setContent] = useState('');
     const [file,setFile] = useState('');
-    const [redirect,setRedicrect] = useState(false);
+    const id = searchParams.get('blogId');
+    const [redirect,setRedicrect] = useState('');
 
-    async function createNewPost(ev) {
-        const data = new FormData();
-        data.set('title', title);
-        data.set('summary', summary);
-        data.set('category', category);
-        data.set('tags', tags);
-        data.set('content', content);
-        data.set('file', file[0]);
+    useEffect(() => {
+        fetch('http://localhost:4000/post/' + id)
+        .then(reponse => {
+            Response.json().then(postInfo => {
+                setTitle(postInfo.title);
+                setSummary(postInfo.summary);
+                setTags(postInfo.tags);
+                setContent(postInfo.content);
+                setFile(postInfo.file)
+            })
+        })
+    }, []);
+
+    async function updatePost(ev) {
         ev.preventDefault();
-        const response = await fetch('http://localhost:4000/post', {
-            method: 'POST',
-            body:  data,
-        });
-        
-        if(response.ok) {
-            setRedicrect(true);
-        }
     }
 
     if(redirect) {
         return <Navigate to={'/'} />
     }
-    return (
+    return(
         <div className='create-post-page'>
             <div className="post-Ex-wrapper contact-me-wrapper">
                 <div className="title">
-                        <h3>CREATE YOUR POST</h3>
+                        <h3>EDIT YOUR POST</h3>
                 </div>
             </div>
 
-            <form class="create-post-container" onSubmit={createNewPost}>
+            <form class="create-post-container" onSubmit={updatePost}>
                 <fieldset>
                     <legend for="title"><span className='form-section-titles'>Title</span></legend>
                     <input type="title" 

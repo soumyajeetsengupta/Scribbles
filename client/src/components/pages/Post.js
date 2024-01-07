@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from 'react-router-dom';
 
-function Post({title,summary,category,tags,cover,content,createdAt}) {
+function Post({_id,title,summary,category,tags,cover,content,createdAt}) {
     return(
         <article className="post-wrapper p-c-wrapper">
             <div className="title">
-              <h3><span class="edit-btn"><i class="fa-regular fa-pen-to-square"></i></span> <Link to='/post' style={{textDecoration: 'none'}}>{title}</Link></h3>
+              <h3><Link to={`post/${_id}`} style={{textDecoration: 'none'}}>{title}</Link></h3>
             </div>
             <div className="post-meta-tags">
               <ul className='meta-tags-container'>
@@ -43,7 +43,7 @@ function Post({title,summary,category,tags,cover,content,createdAt}) {
             </div>
             <div className="post-footer">
               <div className="auth-foo-left">
-                <i><Link to='/post' className="post-foo-read-more">Read more [..]</Link></i>
+                <i><Link to={`/post?id=${title}&blogCategory=${category}&blogTags=${tags}&blogCover=${cover}&blogContent=${content}&blogCreationTime=${createdAt}&blogId=${'659a55c544d52f065a127cd0'}`} className="post-foo-read-more">Read more [..]</Link></i>
               </div>
               <div className="auth-foo-right">
                 <div className="socials">
