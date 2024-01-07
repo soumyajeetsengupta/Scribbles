@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from 'react-router-dom';
 
-function Post({title,summary,cover,content,createdAt}) {
+function Post({title,summary,category,tags,cover,content,createdAt}) {
     return(
         <article className="post-wrapper p-c-wrapper">
             <div className="title">
@@ -15,11 +15,11 @@ function Post({title,summary,cover,content,createdAt}) {
                 </li>
                 <li className='category'>
                   <i class="fa-regular fa-folder-open"></i>
-                  <p>Tribute</p>
+                  <p>{category}</p>
                 </li>
                 <li className='tags'>
                   <i class="fa-solid fa-tags"></i>
-                  <p>genius, gaming</p>
+                  <p>{tags}</p>
                 </li>
                 <li className='comments'>
                   <i class="fa-solid fa-comments"></i>
@@ -39,7 +39,7 @@ function Post({title,summary,cover,content,createdAt}) {
               <img src={'http://localhost:4000/' + cover} alt='post-media' />
             </div>
             <div className="post-text">
-              {summary}
+              <p>{summary}</p>
             </div>
             <div className="post-footer">
               <div className="auth-foo-left">

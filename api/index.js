@@ -20,10 +20,12 @@ app.post('/post', uploadMiddleware.single('file'), async (req, res) => {
     const newPath = path+'.'+ext;
     fs.renameSync(path, newPath);
 
-    const {title, summary, content} = req.body;
+    const {title, summary, category, tags, content} = req.body;
     const postDoc = await Post.create({
         title,
         summary,
+        category,
+        tags,
         content,
         cover: newPath,
     });

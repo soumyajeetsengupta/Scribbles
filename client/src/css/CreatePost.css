@@ -45,3 +45,13 @@ input {
     padding: 10px 10px;
     font-size: medium;
 }
+
+.cats-tags {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cats-tags fieldset {
+    width: 49%;
+}

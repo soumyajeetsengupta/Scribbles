@@ -24,6 +24,8 @@ const formats = [
 export default function CreatePost() {
     const [title,setTitle] = useState('');
     const [summary,setSummary] = useState('');
+    const [category,setCategory] = useState('');
+    const [tags,setTags] = useState('');
     const [content,setContent] = useState('');
     const [file,setFile] = useState('');
     const [redirect,setRedicrect] = useState(false);
@@ -32,6 +34,8 @@ export default function CreatePost() {
         const data = new FormData();
         data.set('title', title);
         data.set('summary', summary);
+        data.set('category', category);
+        data.set('tags', tags);
         data.set('content', content);
         data.set('file', file[0]);
         ev.preventDefault();
@@ -76,6 +80,31 @@ export default function CreatePost() {
                         placeholder={'Summary'} 
                     />
                 </fieldset>
+
+                <div className='cats-tags'>
+                    <fieldset>
+                        <legend><span className='form-section-titles'>Category</span></legend>
+                        <input 
+                            type="category" 
+                            value={category}
+                            onChange={ev => setCategory(ev.target.value)}
+                            placeholder={'Tech / Adventure'} 
+                            required
+                        />
+                    </fieldset>
+
+                    <fieldset>
+                        <legend><span className='form-section-titles'>Tags</span></legend>
+                        <input 
+                            type="tags" 
+                            value={tags}
+                            onChange={ev => setTags(ev.target.value)}
+                            placeholder={'genius, gaming'}
+                            required
+                        />
+                    </fieldset>
+                </div>
+
                 <fieldset>
                     <legend><span className='form-section-titles'>Choose Image</span></legend>
                     <input 
@@ -83,6 +112,8 @@ export default function CreatePost() {
                         onChange={ev => setFile(ev.target.files)}
                     />
                 </fieldset>
+
+
                 <fieldset>
                     <legend><span className='form-section-titles'>Your story goes here...</span></legend>
                     <ReactQuill 

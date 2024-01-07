@@ -1,3 +1,7 @@
+// Essentials - Start
+import { useEffect, useState } from "react";
+// Essentials - End
+
 // CSS - Start
 import './css/Reusables.css';
 import './App.css';
@@ -19,11 +23,24 @@ import CreatePost from './components/pages/CreatePost';
 // Components - End
 
 function App() {
+  const [posts,setPosts] = useState([]);
+    useEffect(() => {
+        const response = fetch('http://localhost:4000/post').then(response => {
+            response.json().then(posts => {
+                setPosts(posts);
+            });
+        });
+    }, []);
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={ <><HomePage /> <RightSidebar /></>} />
-        <Route path={'/post'} element={ <><ExpandedPost /> <RightSidebar /></> } />
+        <Route path={'/post'} element={ <>
+            {posts.length > 0  && posts.map(post => (
+                <ExpandedPost {...post}/>
+            ))}
+         <RightSidebar /></> } />
         <Route path={'/contact-me'} element={ <Contact /> } />
         <Route path={'/about-me'} element={ <AboutMe /> } />
         <Route path={'/create-post'} element={ <CreatePost /> } />

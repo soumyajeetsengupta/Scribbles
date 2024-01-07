@@ -4,6 +4,8 @@ const {Schema, model} = mongoose;
 const PostSchema = new Schema({
     title:String,
     summary:String,
+    category:String,
+    tags:String,
     content:String,
     cover:String,
 }, {
