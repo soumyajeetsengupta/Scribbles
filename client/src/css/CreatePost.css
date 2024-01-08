@@ -55,3 +55,15 @@ input {
 .cats-tags fieldset {
     width: 49%;
 }
+
+fieldset:nth-child(1) input, fieldset:nth-child(2) textarea {
+    background-color: #212121;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size: medium;
+    width: 100% !important;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}

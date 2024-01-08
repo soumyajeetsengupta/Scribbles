@@ -57,12 +57,20 @@ export default function CreatePost() {
 
                 <fieldset>
                     <legend><span className='form-section-titles'>Summary</span></legend>
-                    <input 
+                    <textarea 
+                    type="summary" 
+                    name="summary" 
+                    value={summary} 
+                    onChange={ev => setSummary(ev.target.value)} 
+                    placeholder={'Summary'}  
+                    rows="7" 
+                    wrap="soft"> </textarea>
+                    {/* <input 
                         type="summary" 
                         value={summary}
                         onChange={ev => setSummary(ev.target.value)}
                         placeholder={'Summary'} 
-                    />
+                    /> */}
                 </fieldset>
 
                 <div className='cats-tags'>

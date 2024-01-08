@@ -3,6 +3,25 @@
         margin-top: 5px;
     }
 
+    /* Expanded Post */
+
+    #main-expanded {
+        width: 362px !important;
+    }
+
+    .cmt-form-container {
+        grid-template-columns: repeat(1, 1fr) !important;
+        grid-template-rows: repeat(4, 1fr) !important;
+        grid-template-areas: "n"
+            "e"
+            "p"
+            "t" !important;
+    }
+
+    
+
+    /* End Of Expanded Post */
+
     /* Create your post */
     .create-post-page {
         width: 362px !important;
