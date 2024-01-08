@@ -44,4 +44,28 @@ app.get('/post/:id', async (req, res) => {
     res.json(postDoc);
 });
 
+app.put('/post', uploadMiddleware.single('file'), async(req, res) => {
+    let newPath = null;
+    if(req.file) {
+        const {originalname,path} = req.file;
+        const parts = originalname.split('.');
+        const ext = parts[parts.length - 1];
+        newPath = path+'.'+ext;
+        fs.renameSync(path, newPath);
+    }
+    const {id, title, summary, category, tags, content} = req.body;
+    const postDoc = await Post.findById(id);
+
+    postDoc.title = title;
+    postDoc.summary = summary;
+    postDoc.category = category;
+    postDoc.tags = tags;
+    postDoc.content = content;
+    postDoc.cover = newPath ? newPath : postDoc.cover;
+
+    await postDoc.save();
+
+    res.json(postDoc);
+});
+
 app.listen(4000);

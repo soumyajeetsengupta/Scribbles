@@ -1,40 +1,54 @@
 import { useEffect, useState } from 'react';
-import { Navigate } from 'react-router-dom';
-import { useSearchParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 
 import '../../css/CreatePost.css';
 import Editor from './Editor';
 
 export default function EditPost() {
-    const [searchParams] = useSearchParams();
+    const {id} = useParams();
     const [title,setTitle] = useState('');
     const [summary,setSummary] = useState('');
     const [category,setCategory] = useState('');
     const [tags,setTags] = useState('');
     const [content,setContent] = useState('');
     const [file,setFile] = useState('');
-    const id = searchParams.get('blogId');
+    const [cover,setCover] = useState('');
     const [redirect,setRedicrect] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:4000/post/' + id)
-        .then(reponse => {
-            Response.json().then(postInfo => {
+        fetch(`http://localhost:4000/post/${id}`)
+        .then(response => {
+            response.json().then(postInfo => {
                 setTitle(postInfo.title);
                 setSummary(postInfo.summary);
                 setTags(postInfo.tags);
                 setContent(postInfo.content);
-                setFile(postInfo.file)
-            })
-        })
+                setFile(postInfo.file);
+            });
+        });
     }, []);
 
     async function updatePost(ev) {
         ev.preventDefault();
+        const data = new FormData();
+        data.set('title', title);
+        data.set('summary', summary);
+        data.set('category', category);
+        data.set('tags', tags);
+        data.set('content', content);
+        data.set('id', id);
+        if(file?.[0]) {
+            data.set('file', file?.[0]);
+        }
+        const response = await fetch('http://localhost:4000/post', {
+            method: 'PUT',
+            body: data
+        });
+        if(response.ok) { setRedicrect(true) }
     }
 
     if(redirect) {
-        return <Navigate to={'/'} />
+        return <Navigate to={`/post/${id}`} />
     }
     return(
         <div className='create-post-page'>
@@ -106,7 +120,7 @@ export default function EditPost() {
                     />
                 </fieldset>
                 
-                <button>Create post</button>
+                <button>Edit post</button>
             </form>
         </div>
     );

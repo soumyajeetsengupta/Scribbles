@@ -40,7 +40,7 @@ function App() {
         <Route path={'/post/:id'} element={ <><ExpandedPost /> <RightSidebar /></> } />
         <Route path={'/contact-me'} element={ <Contact /> } />
         <Route path={'/about-me'} element={ <AboutMe /> } />
-        <Route path={'/edit-post'} element={ <EditPost /> } />
+        <Route path={'/edit-post/:id'} element={ <EditPost /> } />
         <Route path={'/create-post'} element={ <CreatePost /> } />
       </ Route>
     </Routes>
