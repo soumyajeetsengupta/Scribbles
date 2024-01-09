@@ -7,6 +7,7 @@ export default function ExpandedPost () {
     const {id} = useParams();
 
     useEffect(() => { 
+        window.scrollTo(0, 0);
         fetch(`http://localhost:4000/post/${id}`)
         .then(response => {
             response.json().then(postInfo => {
@@ -72,7 +73,7 @@ export default function ExpandedPost () {
                 <div className="title">
                     <h2><span>3</span> Comments on The One-Man Maestro: How Chris Sawyer Crafted Gaming History</h2>
                 </div>
-                <div className="comments-output">
+                <div className="comments-output-screen-lg">
                     <div className="cmt-1">
                         <div className='cmt-pfp'>
                             <img src='https://media.licdn.com/dms/image/D4D03AQF3Cu7CNTIkow/profile-displayphoto-shrink_800_800/0/1690113666633?e=1709769600&v=beta&t=8lgMQgvxPhBy9wadsRWaxmC4eWouEtDDbryTViG4fnw' alt='cmt-pfp-img' />

@@ -32,7 +32,6 @@ export default function AboutMe () {
     
     function animateProgressBar() {
         let contentsPresent = document.getElementsByClassName('skills-wrapper').length || 0;
-        console.log(contentsPresent);
         if(contentsPresent <= 0)
         {
             window.removeEventListener('scroll', animateProgressBar);

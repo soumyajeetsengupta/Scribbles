@@ -142,3 +142,28 @@
     .socials span a i:hover {
         color: #ECB1C3;
     }
+
+    article .title h3 a {
+        background-color: #212121;
+        font-family: 'Courier New', Courier, monospace !important;
+        transition: all 0.3s ease-in-out;
+    }
+
+    article .title h3 a:hover {
+        background-color: #ECB1C3;
+    }
+
+    .auth-foo-left i a {
+        color: #ECB1C3;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .auth-foo-left i a:hover {
+        color: #686868;
+    }
+
+    .posts {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.7s ease-in-out;
+    }

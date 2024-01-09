@@ -1,11 +1,39 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect } from "react";
 import { Link } from 'react-router-dom';
 
 function Post({_id,title,summary,category,tags,cover,content,createdAt}) {
+  let i = 0;
+  
+  function animateFadeIn() {
+    let contentsPresent = document.getElementsByClassName('posts').length || 0;
+    if(contentsPresent <= 0 || i >= contentsPresent)
+    {
+      window.removeEventListener('scroll', animateFadeIn);
+      return;
+    }
+
+    let targetElem = document.getElementsByClassName('posts')[i];
+    let elemTop = targetElem.getBoundingClientRect().top;
+    let isVisible = (elemTop+50 <= window.innerHeight);
+
+      if(isVisible) {
+        targetElem.style.transform = "translateY(0px)";
+        targetElem.style.opacity = 1;
+        if(i < contentsPresent){i += 1;}
+        console.log(i);
+      }
+
+  }
+  useEffect(() => {
+    animateFadeIn();
+    window.addEventListener('scroll', animateFadeIn);
+  }, []);
+
     return(
-        <article className="post-wrapper p-c-wrapper">
+        <article className="post-wrapper p-c-wrapper posts" id={_id}>
             <div className="title">
-              <h3><Link to={`post/${_id}`} style={{textDecoration: 'none'}}>{title}</Link></h3>
+              <h3><Link to={`post/${_id}`} scrollTo="top" style={{textDecoration: 'none'}}>{title}</Link></h3>
             </div>
             <div className="post-meta-tags">
               <ul className='meta-tags-container'>
@@ -43,7 +71,7 @@ function Post({_id,title,summary,category,tags,cover,content,createdAt}) {
             </div>
             <div className="post-footer">
               <div className="auth-foo-left">
-                <i><Link to={`/post?id=${title}&blogCategory=${category}&blogTags=${tags}&blogCover=${cover}&blogContent=${content}&blogCreationTime=${createdAt}&blogId=${'659a55c544d52f065a127cd0'}`} className="post-foo-read-more">Read more [..]</Link></i>
+                <i><Link to={`post/${_id}`} className="post-foo-read-more">Read more [..]</Link></i>
               </div>
               <div className="auth-foo-right">
                 <div className="socials">

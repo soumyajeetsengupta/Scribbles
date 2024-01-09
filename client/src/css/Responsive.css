@@ -1,6 +1,7 @@
 @media only screen and (max-width: 767px) and (orientation: portrait) {
     .row {
         margin-top: 5px;
+        background-color: #212121;
     }
 
     /* Expanded Post */
