@@ -1,8 +1,23 @@
 @media only screen and (max-width: 767px) and (orientation: portrait) {
     .row {
-        margin-top: 5px;
+        margin-top: 0px;
         background-color: #212121;
     }
+
+    /* REUSEABLES */
+    .a-p-c-wrapper, .p-c-wrapper, .widget, .contact-me-wrapper, .p-p-c-wrapper, fieldset input  {
+        box-shadow: none !important;
+    }
+
+    .cats-tags {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .cats-tags fieldset {
+        width: 100% !important;
+    }
+    /* REUSEABLES */
 
     /* Expanded Post */
 
