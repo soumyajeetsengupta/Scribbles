@@ -1,4 +1,4 @@
-@media only screen and (max-width: 767px) and (orientation: portrait) {
+@media only screen and (max-width: 926px) and (orientation: landscape) {
     .row {
         margin-top: 0px;
         background-color: #212121;
@@ -22,7 +22,7 @@
     /* Expanded Post */
 
     #main-expanded {
-        width: 362px !important;
+        width: 100% !important;
     }
 
     .cmt-form-container {
@@ -40,7 +40,7 @@
 
     /* Create your post */
     .create-post-page {
-        width: 362px !important;
+        width: 100% !important;
     }
 
     .create-post-container input{
@@ -50,10 +50,16 @@
 
     /* NAVBAR */
     #navbar {
+        width: 100% !important;
         display: flex !important;
     }
 
+    .hide-menu {
+        width: 100% !important;
+    }
+
     .navbar-menu {
+        width: 100% !important;
         display: block !important;
     }
 
@@ -76,7 +82,223 @@
 
     /* Homepage */
     #main {
-        width: 362px !important;
+        width: 665px !important;
+    }
+
+    .media {
+        gap: none !important;
+        display: block !important;
+    }
+    .media p {
+        font-size: 17px !important;
+        padding-right: 0px !important;
+    }
+
+    .media img {
+        float: left !important;
+        height: 140px !important;
+        margin-right: 20px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .title h3 {
+        text-align: center !important;
+    }
+
+    .author-footer {
+        gap: 20px !important;
+        flex-direction: column !important;
+    }
+
+    .post-media img {
+        margin: auto;
+        width: 585px !important;
+    }
+
+    .post-media, .post-text, .post-footer {
+        margin: auto;
+        width: 585px !important;
+    }
+    
+    .meta-tags-container {
+        margin: auto;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 300px !important;
+        padding-right: 0px !important;
+        background-color: #212121 !important;
+    }
+
+    .meta-tags-container li {
+        font-size: x-small !important;
+        text-align: center !important;
+    }
+
+    .pagination-nav {
+        margin-bottom: 40px;
+    }
+
+    #right-sidebar {
+        width: 100% !important;
+    }
+
+    .widget, .widget-wrapper {
+        margin: auto !important;
+        text-align: center !important;
+    }
+
+    .widget {
+        margin-bottom: 20px !important;
+    }
+
+    .hot-topics {
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    /* Homepage End */
+
+    /* ABOUT US PAGE */
+
+    #main-about-me {
+        width: 665px !important;
+    }
+
+    .my-skill, .what-can-do {
+        width: 100% !important;
+    }
+
+    .my-skill-section {
+        width: 665px !important;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .according-description p {
+        padding: 0px 8px;
+    }
+
+    /* END OF ABOUT US PAGE */
+
+    /* Contact Page */
+    .row, .contact-form-main-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    #main-contact {
+        width: 100% !important;
+    }
+
+    .contact-me-form, .contact-details {
+        width: 100% !important;
+    }
+
+    .post-cmt-btn {
+        justify-content: center !important;
+    }
+
+    .contact-me-form-container {
+        grid-template-areas:
+        "n n"
+        "e e"
+        "p p"
+        "s s"
+        "t t" !important;
+    }
+    /* Contact Page End */
+}
+
+
+
+@media only screen and (max-width: 926px) and (orientation: portrait) {
+    .row {
+        margin-top: 0px;
+        background-color: #212121;
+    }
+
+    /* REUSEABLES */
+    .a-p-c-wrapper, .p-c-wrapper, .widget, .contact-me-wrapper, .p-p-c-wrapper, fieldset input  {
+        box-shadow: none !important;
+    }
+
+    .cats-tags {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .cats-tags fieldset {
+        width: 100% !important;
+    }
+    /* REUSEABLES */
+
+    /* Expanded Post */
+
+    #main-expanded {
+        width: 100% !important;
+    }
+
+    .cmt-form-container {
+        grid-template-columns: repeat(1, 1fr) !important;
+        grid-template-rows: repeat(4, 1fr) !important;
+        grid-template-areas: "n"
+            "e"
+            "p"
+            "t" !important;
+    }
+
+    
+
+    /* End Of Expanded Post */
+
+    /* Create your post */
+    .create-post-page {
+        width: 100% !important;
+    }
+
+    .create-post-container input{
+        width: 100% !important;
+    }
+    /* End of create your post */
+
+    /* NAVBAR */
+    #navbar {
+        width: 100% !important;
+        display: flex !important;
+    }
+
+    .navbar-menu {
+        width: 100% !important;
+        display: block !important;
+    }
+
+    .hide-menu {
+        width: 100% !important;
+    }
+
+    .flat-responsive-menu {
+        text-align: center;
+    }
+
+    .flat-responsive-menu li:not(:last-child) {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.242);
+    }
+
+    /* END OF NAVBAR */
+
+    /* LEFTSIDE BAR */
+    #left-sidebar {
+        opacity: 0;
+        display: none;
+    }
+    /* END OF LEFTSIDE BAR */
+
+    /* Homepage */
+    #main {
+        width: 100% !important;
     }
 
     .media {
@@ -131,7 +353,7 @@
     }
 
     #right-sidebar {
-        width: 362px !important;
+        width: 100% !important;
     }
 
     .widget, .widget-wrapper {
@@ -153,15 +375,15 @@
     /* ABOUT US PAGE */
 
     #main-about-me {
-        width: 362px !important;
+        width: 100% !important;
     }
 
     .my-skill, .what-can-do {
-        width: 362px !important;
+        width: 100% !important;
     }
 
     .my-skill-section {
-        width: 362px !important;
+        width: 100% !important;
         flex-direction: column !important;
     }
 
@@ -179,7 +401,7 @@
     }
 
     #main-contact {
-        width: 362px !important;
+        width: 100% !important;
     }
 
     .contact-me-form, .contact-details {

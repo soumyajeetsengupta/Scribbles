@@ -43,7 +43,7 @@ export default function AboutMe () {
         let elemTop = targetElem.getBoundingClientRect().top;
         let elemBottom = targetElem.getBoundingClientRect().bottom;
 
-        let isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+        let isVisible = window.innerWidth <= 760 ? (elemTop+200 <= window.innerHeight): ((elemTop >= 0) && (elemBottom <= window.innerHeight));
 
         for(let i = 1; i <= contentsPresent; i++)
         {
