@@ -86,7 +86,7 @@
     grid-template-areas: 
     "n t"
     "e t"
-    "p t"
+    ". t"
     ;
 }
 
@@ -143,3 +143,41 @@
 
 
 /* Small Screen */
+
+.comment-output-screen-sm {
+    margin: 25px auto;
+}
+
+.img-container img {
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 100%;
+  }
+  
+  .cmt {
+    gap: 14px;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+  }
+  
+  .cmt-sm-text {
+    margin-top: 2px;
+    align-self: center;
+    color: rgba(130, 130, 130, 0.614);
+  }
+  
+  .cmt-name-sm {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .comment-section-mobile {
+    display: none;
+  }
+
+  .commnet-section {
+    display: block;
+  }

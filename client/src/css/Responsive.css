@@ -17,6 +17,14 @@
     .cats-tags fieldset {
         width: 100% !important;
     }
+
+    .commnet-section {
+        display: none !important;
+    }
+
+    .comment-section-mobile {
+        display: block !important;
+    }
     /* REUSEABLES */
 
     /* Expanded Post */
@@ -30,7 +38,6 @@
         grid-template-rows: repeat(4, 1fr) !important;
         grid-template-areas: "n"
             "e"
-            "p"
             "t" !important;
     }
 
@@ -233,6 +240,14 @@
     .cats-tags fieldset {
         width: 100% !important;
     }
+
+    .commnet-section {
+        display: none !important;
+    }
+
+    .comment-section-mobile {
+        display: block !important;
+    }
     /* REUSEABLES */
 
     /* Expanded Post */
@@ -246,7 +261,6 @@
         grid-template-rows: repeat(4, 1fr) !important;
         grid-template-areas: "n"
             "e"
-            "p"
             "t" !important;
     }
 
