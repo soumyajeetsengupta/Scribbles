@@ -1,7 +1,10 @@
 import '../../css/AboutMe.css';
+import { useEffect, useState } from "react";
 import {accordian} from '../functionalities/featuresAboutMe.js'
 
 export default function AboutMe () {
+    const [loaded, setLoaded] = useState(false);
+
     const clickAccordian = (targetElem) => {
         let id = targetElem;
         let element = document.getElementById(targetElem);
@@ -61,8 +64,16 @@ export default function AboutMe () {
 
     window.addEventListener('scroll', animateProgressBar);
 
+    useEffect(() => { 
+        setLoaded(true);
+        return () => {
+        setLoaded(false);
+        // Perform cleanup tasks or unsubscribe from external subscriptions here.
+        };
+    }, []);
+
     return(
-        <div id="main-about-me">
+        <div id="main-about-me" className={`fade-in ${loaded ? 'loaded' : ''}`}>
             <div className="post-Ex-wrapper contact-me-wrapper">
                 <div className="title">
                     <h3>ABOUT SCRIBBLE</h3>

@@ -1,11 +1,22 @@
 // import Post from './Post';
 import '../../css/Main.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
 import AllPosts from './AllPosts';
 
 function HomePage() {
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => { 
+    setLoaded(true);
+    return () => {
+      setLoaded(false);
+      // Perform cleanup tasks or unsubscribe from external subscriptions here.
+    };
+  }, []);
+  
+
     return (
-        <div id="main">
+        <div id="main" className={`fade-in ${loaded ? 'loaded' : ''}`}>
           <article className="author-wrapper a-p-c-wrapper">
             <div className="title">
               <h3>HI THERE, WELCOME TO <span>SCRIBBLE</span></h3>

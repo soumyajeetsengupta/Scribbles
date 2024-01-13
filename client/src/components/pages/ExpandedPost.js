@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from 'react-router-dom';
 
 export default function ExpandedPost () {
+    const [loaded, setLoaded] = useState(false);
     const [postInfo, setPostInfo] = useState(null);
     const {id} = useParams();
 
@@ -13,13 +14,14 @@ export default function ExpandedPost () {
             response.json().then(postInfo => {
                 setPostInfo(postInfo);
             });
+            setLoaded(true);
         }); 
     }, []);
 
     if(!postInfo) return '';
 
     return(
-        <div id="main-expanded">
+        <div id="main-expanded" className={`fade-in ${loaded ? 'loaded' : ''}`}>
             <div className="post-Ex-wrapper p-p-c-wrapper">
                 <div className="title">
                     <h3><Link to={`/edit-post/${id}`} style={{textDecoration: 'none'}}><span class="edit-btn"><i class="fa-regular fa-pen-to-square"></i></span></Link>{postInfo.title}</h3>

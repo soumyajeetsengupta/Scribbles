@@ -1,8 +1,18 @@
 import '../../css/Contact.css';
+import { useEffect, useState } from "react";
 
 export default function Contact () {
+    const [loaded, setLoaded] = useState(false);
+    useEffect(() => { 
+        setLoaded(true);
+        return () => {
+          setLoaded(false);
+          // Perform cleanup tasks or unsubscribe from external subscriptions here.
+        };
+      }, []);
+
     return (
-        <div id="main-contact">
+        <div id="main-contact" className={`fade-in ${loaded ? 'loaded' : ''}`}>
             <div className="post-Ex-wrapper contact-me-wrapper">
                 <div className="title">
                     <h3>GET IN TOUCH</h3>

@@ -181,3 +181,16 @@
   .commnet-section {
     display: block;
   }
+
+  /* TRANSITION - FOR - COMPONENTS */
+
+  .fade-in {
+    opacity: 0 !important;
+    transition: opacity 0.5s ease-in-out !important;
+}
+
+.fade-in.loaded {
+    opacity: 1 !important;
+}
+
+/* ***** */
