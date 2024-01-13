@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "serve": "nodemon index.js"
+    "serve": "nodemon index.js",
+    "build": "yarn install"
   },
   "dependencies": {
     "cors": "^2.8.5",
