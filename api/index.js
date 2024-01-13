@@ -2,16 +2,13 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const Post = require('./models/Post');
-const app = express();
 const multer = require('multer');
 const uploadMiddleware = multer({ dest: 'uploads/'});
 const fs = require('fs');
+const app = express();
 
-app.use(cors({
-    origin: ["https://deploy-mern-1whq.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true
-}));
+app.use(cors());
+
 app.use(express.json());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
