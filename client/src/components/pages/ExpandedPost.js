@@ -10,7 +10,7 @@ export default function ExpandedPost () {
 
     useEffect(() => { 
         window.scrollTo(0, 0);
-        fetch(`http://localhost:4000/post/${id}`)
+        fetch(`https://scribble-api.onrender.com/post/${id}`)
         .then(response => {
             response.json().then(postInfo => {
                 setPostInfo(postInfo);
@@ -55,7 +55,7 @@ export default function ExpandedPost () {
 
                 <article className="post-Ex-wrapper p-p-c-wrapper">
                     <div className="post-media">
-                    <img src={'http://localhost:4000/' + postInfo.cover} alt='post-media' />
+                    <img src={'https://scribble-api.onrender.com/' + postInfo.cover} alt='post-media' />
                     </div>
                     <div className="post-text" dangerouslySetInnerHTML={{__html: postInfo.content}} />
                     <div className="post-footer">

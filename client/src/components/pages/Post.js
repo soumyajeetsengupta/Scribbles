@@ -64,7 +64,7 @@ function Post({_id,title,summary,category,tags,cover,content,createdAt}) {
               </ul>
             </div>
             <div className="post-media">
-              <img src={'http://localhost:4000/' + cover} alt='post-media' />
+              <img src={'https://scribble-api.onrender.com/' + cover} alt='post-media' />
             </div>
             <div className="post-text">
               <p>{summary}</p>

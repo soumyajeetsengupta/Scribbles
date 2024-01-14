@@ -16,7 +16,7 @@ export default function EditPost() {
     const [redirect,setRedicrect] = useState('');
 
     useEffect(() => {
-        fetch(`http://localhost:4000/post/${id}`)
+        fetch(`https://scribble-api.onrender.com/post/${id}`)
         .then(response => {
             response.json().then(postInfo => {
                 setTitle(postInfo.title);
@@ -40,7 +40,7 @@ export default function EditPost() {
         if(file?.[0]) {
             data.set('file', file?.[0]);
         }
-        const response = await fetch('http://localhost:4000/post', {
+        const response = await fetch('https://scribble-api.onrender.com/post', {
             method: 'PUT',
             body: data
         });
