@@ -6,7 +6,22 @@ import '../../css/ExpandedPost.css';
 export default function ExpandedPost () {
     const [postInfo, setPostInfo] = useState(null);
     const [loaded, setLoaded] = useState(false);
+    const [name, setName] = useState('');
+    const [message, setMessage] = useState('');
     const {id} = useParams();
+
+    /*async function createNewComment(ev) {
+        console.log(ev);
+        const data = new FormData();
+        data.set('name', name);
+        data.set('message', message);
+        ev.preventDefault();
+
+        const response = await fetch('https://scribble-api.onrender.com/post', {
+            method: 'PUT',
+            body: data
+        });
+    }*/
 
     useEffect(() => { 
         window.scrollTo(0, 0);
@@ -25,7 +40,7 @@ export default function ExpandedPost () {
         <div id="main-expanded" className={`fade-in ${loaded ? 'loaded' : ''}`}>
                 <div className="post-Ex-wrapper p-p-c-wrapper">
                     <div className="title">
-                        <h3><Link to={`/edit-post/${id}`} style={{textDecoration: 'none'}}><span class="edit-btn"><i class="fa-regular fa-pen-to-square"></i></span></Link>{postInfo.title}</h3>
+                        <h3>{postInfo.title}</h3>
                     </div>
                     <div className="post-meta-tags">
                         <ul className='meta-tags-container'>
@@ -168,14 +183,24 @@ export default function ExpandedPost () {
                     </div>
                     <form class="cmt-form-container">
                         <div className='cmt-name-box'>
-                            <input type='name' id='cmt-name' placeholder='Name' />
+                            <input 
+                                type='name' 
+                                id='cmt-name' 
+                                placeholder='Name' 
+                                required
+                            />
                         </div>
                         <div className='cmt-message-box'>
-                            <textarea id='cmt-message' placeholder='Message'></textarea>
+                            <textarea 
+                                type="message"
+                                name="message"
+                                id='cmt-message' 
+                                placeholder='Message'
+                            >
+                            </textarea>
                         </div>
-                    </form>
-
-                    <div className='post-cmt-btn'><button className='post-cmt'>Get A Quote</button></div>  
+                    </form> 
+                    <div className='post-cmt-btn'><button className='post-cmt'>Get A Quote</button></div> 
                 </div>
         </div>
     );

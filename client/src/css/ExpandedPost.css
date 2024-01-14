@@ -103,10 +103,6 @@
     grid-area: n;
 }
 
-.cmt-email-box {
-    grid-area: e;
-}
-
 .cmt-message-box {
     grid-area: t;
 }

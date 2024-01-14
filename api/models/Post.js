@@ -9,6 +9,7 @@ const PostSchema = new Schema({
     content:String,
     cover:String, 
     views:Number,
+    comments:Object,
 }, {
     timestamps: true,
 });

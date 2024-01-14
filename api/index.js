@@ -14,25 +14,13 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
 
 mongoose.connect('mongodb+srv://sgs2305maddy:wiTgAYXnwWgyXWml@cluster0.b0qlv6j.mongodb.net/?retryWrites=true&w=majority');
 
-app.post('/post', uploadMiddleware.single('file'), async (req, res) => {
-    const {originalname,path} = req.file;
-    const parts = originalname.split('.');
-    const ext = parts[parts.length - 1];
-    const newPath = path+'.'+ext;
-    fs.renameSync(path, newPath);
-
-    const {title, summary, category, tags, content, views} = req.body;
+app.post('/post', async (req, res) => {
+    /*const {comments} = req.body;
     const postDoc = await Post.create({
-        title,
-        summary,
-        category,
-        tags,
-        content,
-        cover: newPath,
-        views: 0,
+        comments,
     });
-
-    res.json(postDoc);
+    console.log(comments);
+    res.json(comments);*/
 });
 
 app.get('/post', async (req,res) => {
@@ -48,28 +36,12 @@ app.get('/post/:id', async (req, res) => {
     res.json(postDoc);
 });
 
-app.put('/post', uploadMiddleware.single('file'), async(req, res) => {
-    let newPath = null;
-    if(req.file) {
-        const {originalname,path} = req.file;
-        const parts = originalname.split('.');
-        const ext = parts[parts.length - 1];
-        newPath = path+'.'+ext;
-        fs.renameSync(path, newPath);
-    }
-    const {id, title, summary, category, tags, content} = req.body;
+app.put('/post', async(req, res) => {
+    /*const {comments} = req.body;
     const postDoc = await Post.findById(id);
-
-    postDoc.title = title;
-    postDoc.summary = summary;
-    postDoc.category = category;
-    postDoc.tags = tags;
-    postDoc.content = content;
-    postDoc.cover = newPath ? newPath : postDoc.cover;
-
+    postDoc.comments = comments;
     await postDoc.save();
-
-    res.json(postDoc);
+    res.json(req.body);*/
 });
 
 app.listen(4000);

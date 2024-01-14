@@ -17,10 +17,6 @@ export default function NavbarMenu() {
             </li>
 
             <li>
-                <Link to="/create-post" style={{textDecoration: 'none'}}>Create Post</Link>
-            </li>
-
-            <li>
                 <Link to="/about-me" style={{textDecoration: 'none'}}>About Me</Link>
             </li>
 
