@@ -47,7 +47,7 @@ export default function ExpandedPost () {
                             </li>
                             <li className='views'>
                                 <i class="fa-regular fa-eye"></i>
-                                <p>441</p>
+                                <p>{postInfo.views}</p>
                             </li>
                         </ul>
                     </div>
@@ -76,6 +76,7 @@ export default function ExpandedPost () {
                     <div className="title">
                         <h2><span>3</span> Comments on The One-Man Maestro: How Chris Sawyer Crafted Gaming History</h2>
                     </div>
+
                     <div className="comments-output-screen-lg">
                         <div className="cmt-1">
                             <div className='cmt-pfp'>
@@ -86,14 +87,10 @@ export default function ExpandedPost () {
                                     <div className='cmt-name'>
                                         Surya
                                     </div>
-                                    <div className='cmt-reply-btn'>
-                                        <button>Reply</button>
-                                    </div>
                                 </div>
                                 <p>It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
                             </div>
                         </div>
-
                         <div className="cmt-1">
                             <div className='cmt-pfp'>
                                 <img src='https://media.licdn.com/dms/image/D4D03AQGMHaAgysYYcA/profile-displayphoto-shrink_400_400/0/1700294784629?e=1709769600&v=beta&t=5bcLAtqYGPceLGyZAOhY4xYwRINbE1FBOo73-z99-yE' alt='cmt-pfp-img' />
@@ -103,34 +100,21 @@ export default function ExpandedPost () {
                                     <div className='cmt-name'>
                                         Kasi
                                     </div>
-                                    <div className='cmt-reply-btn'>
-                                        <button>Reply</button>
-                                    </div>
                                 </div>
                                 <p>It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
-
-                                <div className='cmt-sub-section-reply'>
-                                <ul>
-                                    <li>
-                                        <div className="cmt-1">
-                                            <div className='cmt-pfp'>
-                                                <img src='https://media.licdn.com/dms/image/C5603AQE5WcuHVq_E0w/profile-displayphoto-shrink_400_400/0/1636992757460?e=1709769600&v=beta&t=_iQapFGfOcL25ckCzrM0zIDMxhiIHdDeOpWnxNxZyAA' alt='cmt-pfp-img' />
-                                            </div>
-                                            <div className='cmt-text'>
-                                                <div className='cmt-top-bar'>
-                                                    <div className='cmt-name'>
-                                                        Anurag
-                                                    </div>
-                                                    <div className='cmt-reply-btn'>
-                                                        <button>Reply</button>
-                                                    </div>
-                                                </div>
-                                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
                             </div>
+                        </div>
+                        <div className="cmt-1">
+                            <div className='cmt-pfp'>
+                                <img src='https://media.licdn.com/dms/image/C5603AQE5WcuHVq_E0w/profile-displayphoto-shrink_400_400/0/1636992757460?e=1709769600&v=beta&t=_iQapFGfOcL25ckCzrM0zIDMxhiIHdDeOpWnxNxZyAA' alt='cmt-pfp-img' />
+                            </div>
+                            <div className='cmt-text'>
+                                <div className='cmt-top-bar'>
+                                    <div className='cmt-name'>
+                                        Anurag
+                                    </div>
+                                </div>
+                            <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
                             </div>
                         </div>
                     </div>
@@ -185,9 +169,6 @@ export default function ExpandedPost () {
                     <form class="cmt-form-container">
                         <div className='cmt-name-box'>
                             <input type='name' id='cmt-name' placeholder='Name' />
-                        </div>
-                        <div className='cmt-email-box'>
-                            <input type='email' id='cmt-email' placeholder='Email Address' />
                         </div>
                         <div className='cmt-message-box'>
                             <textarea id='cmt-message' placeholder='Message'></textarea>

@@ -85,7 +85,7 @@
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas: 
     "n t"
-    "e t"
+    ". t"
     ". t"
     ;
 }
@@ -105,10 +105,6 @@
 
 .cmt-email-box {
     grid-area: e;
-}
-
-.cmt-phone-box {
-    grid-area: p;
 }
 
 .cmt-message-box {

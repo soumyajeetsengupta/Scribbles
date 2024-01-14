@@ -21,7 +21,7 @@ app.post('/post', uploadMiddleware.single('file'), async (req, res) => {
     const newPath = path+'.'+ext;
     fs.renameSync(path, newPath);
 
-    const {title, summary, category, tags, content} = req.body;
+    const {title, summary, category, tags, content, views} = req.body;
     const postDoc = await Post.create({
         title,
         summary,
@@ -29,6 +29,7 @@ app.post('/post', uploadMiddleware.single('file'), async (req, res) => {
         tags,
         content,
         cover: newPath,
+        views: 0,
     });
 
     res.json(postDoc);
@@ -42,6 +43,8 @@ app.get('/post', async (req,res) => {
 app.get('/post/:id', async (req, res) => {
     const {id} = req.params;
     const postDoc = await Post.findById(id);
+    postDoc.views = 1 + postDoc.views;
+    await postDoc.save();
     res.json(postDoc);
 });
 

@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect } from "react";
 import { Link } from 'react-router-dom';
 
-function Post({_id,title,summary,category,tags,cover,content,createdAt}) {
+function Post({_id,title,summary,category,tags,cover,content,createdAt,views}) {
   let i = 0;
   
   function animateFadeIn() {
@@ -21,7 +21,6 @@ function Post({_id,title,summary,category,tags,cover,content,createdAt}) {
         targetElem.style.transform = "translateY(0px)";
         targetElem.style.opacity = 1;
         if(i < contentsPresent){i += 1;}
-        console.log(i);
       }
 
   }
@@ -59,7 +58,7 @@ function Post({_id,title,summary,category,tags,cover,content,createdAt}) {
                 </li>
                 <li className='views'>
                   <i class="fa-regular fa-eye"></i>
-                  <p>441</p>
+                  <p>{views}</p>
                 </li>
               </ul>
             </div>

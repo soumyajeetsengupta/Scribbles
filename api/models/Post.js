@@ -7,7 +7,8 @@ const PostSchema = new Schema({
     category:String,
     tags:String,
     content:String,
-    cover:String,
+    cover:String, 
+    views:Number,
 }, {
     timestamps: true,
 });
