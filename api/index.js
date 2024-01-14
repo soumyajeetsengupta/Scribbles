@@ -7,10 +7,7 @@ const uploadMiddleware = multer({ dest: 'uploads/'});
 const fs = require('fs');
 const app = express();
 
-app.use(cors({
-    origin: 'https://scribble-client.onrender.com/',
-    methods: ['GET', 'POST', 'PUT']
-}));
+app.use(cors());
 
 app.use(express.json());
 app.use('/uploads', express.static(__dirname + '/uploads'));
