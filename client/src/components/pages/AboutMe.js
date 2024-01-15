@@ -9,7 +9,7 @@ export default function AboutMe () {
         let id = targetElem;
         let element = document.getElementById(targetElem);
         let value = ((id == 'h-1') || (id == 'h-2')) ? "95px" : "120px";
-        if(window.pageXOffset <= 375)
+        if(window.innerWidth <= 375)
         {
             value = ((id == 'h-1') || (id == 'h-2')) ? "145px" : "190px";
         }
