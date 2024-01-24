@@ -22,7 +22,7 @@ function HomePage() {
               <h3>HI THERE, WELCOME TO <span>SCRIBBLE</span></h3>
             </div>
             <div className="media">
-              <img src="https://media.licdn.com/dms/image/D4D03AQG4GvTFemdxvg/profile-displayphoto-shrink_400_400/0/1701826717178?e=1709164800&v=beta&t=5TeEJY1M83h-KVDqZrfrIfOlyDGArnDoLkVawGYx5vE" alt="author-pfp" />
+              <img src="https://media.licdn.com/dms/image/D4D03AQEIRygjUhdCbw/profile-displayphoto-shrink_800_800/0/1705840823721?e=1711584000&v=beta&t=Z6a_IbB-eGH3G6NCFBEIjA79loL6iBeJo2Hez-rV1Wc" alt="author-pfp" />
               <p>Hi all! I'm Soumyajeet from India. I'm 23 years old.<br/>Self-taught fullstack dev by day, cybersecurity enthusiast by night. Building secure web experiences & exploring the fascinating world of digital defense. <br/>Join me on my coding (and hacking) journey!</p>
             </div>
             <div className="author-footer">
