@@ -81,7 +81,7 @@ export default function AboutMe () {
             </div>
 
             <div className="about-me-text post-Ex-wrapper contact-me-wrapper">
-                <img src="https://media.licdn.com/dms/image/D4D03AQG4GvTFemdxvg/profile-displayphoto-shrink_400_400/0/1701826717178?e=1709164800&v=beta&t=5TeEJY1M83h-KVDqZrfrIfOlyDGArnDoLkVawGYx5vE" alt="author-pfp" />
+                <img src="https://media.licdn.com/dms/image/D4D03AQEIRygjUhdCbw/profile-displayphoto-shrink_800_800/0/1705840823721?e=1711584000&v=beta&t=Z6a_IbB-eGH3G6NCFBEIjA79loL6iBeJo2Hez-rV1Wc" alt="author-pfp" />
                 <p>Scribble is not a polished manuscript, but a vibrant tapestry woven with messy threads of learning, life's surprises, and a deep-seated belief in sharing. It's my self-taught SDE journey unveiled, where code snippets dance with personal reflections, celebrating the beautiful imperfection of growth and connection.</p>
                 <p>Under the hood of Scribble hums the MERN stack, a potent cocktail of technologies blending the power of MongoDB for data, the magic of Express for server-side orchestration, the artistry of React for crafting captivating interfaces, and the unifying elegance of Node.js. It's a full-fledged playground for my developer journey, where lines of code dance with vibrant experiences, weaving a tapestry of learning and connection that's yours to explore. Welcome to Scribble, where MERN meets messy but magnificent exploration.</p>
                 <blockquote>
